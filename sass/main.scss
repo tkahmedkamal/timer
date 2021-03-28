@@ -1,0 +1,62 @@
+@import "./mixins.scss";
+@import "./variables";
+@import "./global";
+
+/// Style
+.timer {
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+  @include relative();
+  @include flex-box();
+  @include justify-content();
+  @include align-items();
+
+  @at-root #{&}__controls {
+    @include relative();
+    z-index: 1;
+    text-align: center;
+  }
+
+  @at-root #{&}__duration {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 90px;
+    border: 0;
+    background-color: transparent;
+    color: $primary-color;
+  }
+
+  @at-root #{&}__btn {
+    padding: 10px 15px;
+    border: 0;
+    font-size: 22px;
+    margin-top: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    @include prefix(
+      transition,
+      (background-color 0.3s ease-in-out, color 0.3s ease-in-out),
+      webkit moz o ms
+    );
+    @include prefix(border-radius, 3px, webkit moz o ms);
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  @at-root #{&}__svg {
+    @include absolute($top: 50%, $left: 50%);
+    @include prefix(transform, translate(-50%, -50%));
+    width: 600px;
+    height: 600px;
+  }
+
+  @at-root #{&}__circle {
+    fill: transparent;
+    stroke: $primary-color;
+    stroke-width: 20px;
+  }
+}

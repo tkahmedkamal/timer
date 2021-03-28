@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #eff8ff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+button,
+input {
+  outline: 0;
+}
+
+::selection {
+  background-color: #058eda;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: #058eda;
+  color: #fff;
+}
+
+.timer {
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.timer__controls {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.timer__duration {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 90px;
+  border: 0;
+  background-color: transparent;
+  color: #058eda;
+}
+
+.timer__btn {
+  padding: 10px 15px;
+  border: 0;
+  font-size: 22px;
+  margin-top: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+.timer__btn:hover {
+  color: #058eda;
+}
+
+.timer__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+}
+
+.timer__circle {
+  fill: transparent;
+  stroke: #058eda;
+  stroke-width: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
