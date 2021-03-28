@@ -42,22 +42,12 @@ input {
   color: #fff;
 }
 
+/* == Timer 
+================================ */
 .timer {
   width: 600px;
   height: 600px;
   overflow: hidden;
-  position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 .timer__controls {
   position: relative;
@@ -110,6 +100,67 @@ input {
   fill: transparent;
   stroke: #058eda;
   stroke-width: 20px;
+}
+
+/* == Overlay
+================================ */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.overlay__msg {
+  width: 500px;
+  height: 200px;
+  background-color: #fff;
+  text-transform: capitalize;
+  margin: 50px auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-flex-direction: vertical;
+  -moz-flex-direction: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.overlay__title {
+  color: #212121;
+  font-size: 40px;
+}
+
+.overlay__close {
+  margin-top: 10px;
+  color: #ff6565;
+}
+.overlay__close span {
+  color: #212121;
+  text-transform: uppercase;
+}
+
+/* == Extends
+================================ */
+.timer, .overlay__msg {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

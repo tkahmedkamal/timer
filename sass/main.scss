@@ -2,15 +2,13 @@
 @import "./variables";
 @import "./global";
 
-/// Style
+/* == Timer 
+================================ */
 .timer {
   width: 600px;
   height: 600px;
   overflow: hidden;
-  @include relative();
-  @include flex-box();
-  @include justify-content();
-  @include align-items();
+  @extend %flex-box;
 
   @at-root #{&}__controls {
     @include relative();
@@ -59,4 +57,49 @@
     stroke: $primary-color;
     stroke-width: 20px;
   }
+}
+
+/* == Overlay
+================================ */
+.overlay {
+  @include absolute($top: 0, $left: 0);
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+
+  @at-root #{&}__msg {
+    width: 500px;
+    height: 200px;
+    background-color: #fff;
+    text-transform: capitalize;
+    margin: 50px auto;
+    @include prefix(border-radius, 3px, webkit moz o ms);
+    @extend %flex-box;
+    @include flex-direction(column);
+  }
+
+  @at-root #{&}__title {
+    color: $black-color;
+    font-size: 40px;
+  }
+
+  @at-root #{&}__close {
+    margin-top: 10px;
+    color: $alt-color;
+    span {
+      color: $black-color;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* == Extends
+================================ */
+%flex-box {
+  @include relative();
+  @include flex-box();
+  @include justify-content();
+  @include align-items();
 }
